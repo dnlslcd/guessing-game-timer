@@ -12,6 +12,29 @@ let numGuesses = 1;
 let playGame = true;
 let remainingTime = 30;
 
+// 1. Necesitamos que al llegar a 0, se acabe el juego. Mirad bien las funciones ya existentes en el código.
+
+function intervalo(){
+  remainingTime--;
+  document.querySelector("#timer").textContent = remainingTime;
+}
+setInterval(intervalo, 1000)
+
+// 2. Tenemos que "limpiar" ese Interval para que no siga restando
+if (intervalo == 0){
+  clearInterval(intervalo);
+  endGame();
+}
+
+
+
+
+
+
+
+
+
+
 if (playGame) {
   subt.addEventListener('click', function (e) {
     e.preventDefault();
