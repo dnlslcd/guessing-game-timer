@@ -18,7 +18,7 @@ function intervalo(){
   remainingTime--;
   document.querySelector("#timer").textContent = remainingTime;
 }
-setInterval(intervalo, 1000)
+// setInterval(intervalo, 1000)
 
 // 2. Tenemos que "limpiar" ese Interval para que no siga restando
 if (intervalo == 0){
