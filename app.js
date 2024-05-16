@@ -12,13 +12,13 @@ let numGuesses = 1;
 let playGame = true;
 let remainingTime = 30;
 
-// 1. Necesitamos que al llegar a 0, se acabe el juego. Mirad bien las funciones ya existentes en el código.
+// 1. Necesitamos que al llegar a 0, se acabe el juego. Mirad bien las funciones ya existentes en el código. Y actualizar el textcontent <span id="timer">
 
-function intervalo(){
+function decrementarTiempo(){
   remainingTime--;
   document.querySelector("#timer").textContent = remainingTime;
 }
-// setInterval(intervalo, 1000)
+// setInterval(decrementarTiempo, 1000)
 
 // 2. Tenemos que "limpiar" ese Interval para que no siga restando
 if (intervalo == 0){
