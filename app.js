@@ -18,21 +18,15 @@ function decrementarTiempo(){
   remainingTime--;
   document.querySelector("#timer").textContent = remainingTime;
 }
-// setInterval(decrementarTiempo, 1000)
+setInterval(decrementarTiempo, 1000)
 
-// 2. Tenemos que "limpiar" ese Interval para que no siga restando
-if (intervalo == 0){
-  clearInterval(intervalo);
+// 3. Tenemos que "limpiar" ese Interval para que no siga restando
+if (remainingTime == 0) {
+  // 3.1 Si es así, tenemos que mostrar un mensaje indicando que el tiempo se ha acabado. Buscad en el código, porque existe una función para hacer esto. Además, existe una función para indicar que el juego ha acabado: ejecutadla también. 3 líneas de código
+  displayMessage("Time's up!");
   endGame();
+
 }
-
-
-
-
-
-
-
-
 
 
 if (playGame) {
